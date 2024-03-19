@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box">
+    <h3>Католог товаров</h3>
+<div class="catalog">Книги</div>
+<div class="panel">
+    <div class="catalog">Отечественные</div>
+    <div class="panel">
+        <div class="link1"><a href="#">Детективы</a></div>
+        <div class="link1"><a href="#">Научная фантастика</a></div>
+        <div class="link1"><a href="#">Исторические</a></div>
+    </div>
+    <div class="catalog">Зарубежные</div>
+    <div class="panel">
+        <div class="link1"><a href="#">Детективы</a></div>
+        <div class="link1"><a href="#">Научная фантастика</a></div>
+        <div class="link1"><a href="#">Исторические</a></div>
+    </div>
+</div>
+<div class="catalog">DVD</div>
+<div class="panel">
+    <div class="catalog">Отечественные</div>
+    <div class="panel">
+        <div class="link1"><a href="#">Детективы</a></div>
+        <div class="link1"><a href="#">Научная фантастика</a></div>
+        <div class="link1"><a href="#">Исторические</a></div>
+    </div>
+    <div class="catalog">Зарубежные</div>
+    <div class="panel">
+        <div class="link1"><a href="#">Детективы</a></div>
+        <div class="link1"><a href="#">Научная фантастика</a></div>
+        <div class="link1"><a href="#">Исторические</a></div>
+    </div>
+</div>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("catalog");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>
